@@ -1,9 +1,11 @@
-// src/pages/company/AddEmployee.js
+// AddEmployee.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import Layout from '../../components/Layout';
 import axios from 'axios';
+import { UserPlus, Mail, Lock, Briefcase, Users } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 const AddEmployee = () => {
   const { user } = useAuth();
@@ -16,7 +18,6 @@ const AddEmployee = () => {
     position: '',
     department: ''
   });
-  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,63 +29,93 @@ const AddEmployee = () => {
           headers: { Authorization: `Bearer ${user.token}` }
         }
       );
+      toast.success('Employee added successfully!');
       navigate('/company');
     } catch (err) {
-      setError(err.response?.data?.error || 'Failed to add employee');
+      toast.error(err.response?.data?.error || 'Failed to add employee');
     }
   };
 
+  const inputClasses = "w-full p-3 border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all duration-200";
+  const iconClasses = "text-purple-500 absolute left-3 top-1/2 transform -translate-y-1/2";
+
   return (
     <Layout>
-      <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
-        <h2 className="text-2xl font-bold mb-6">Add New Employee</h2>
-        {error && <div className="bg-red-100 text-red-600 p-3 mb-4 rounded">{error}</div>}
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            placeholder="First Name"
-            className="w-full p-2 border rounded"
-            value={formData.firstName}
-            onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="w-full p-2 border rounded"
-            value={formData.lastName}
-            onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-2 border rounded"
-            value={formData.email}
-            onChange={(e) => setFormData({...formData, email: e.target.value})}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-2 border rounded"
-            value={formData.password}
-            onChange={(e) => setFormData({...formData, password: e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Position"
-            className="w-full p-2 border rounded"
-            value={formData.position}
-            onChange={(e) => setFormData({...formData, position: e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Department"
-            className="w-full p-2 border rounded"
-            value={formData.department}
-            onChange={(e) => setFormData({...formData, department: e.target.value})}
-          />
+      <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+        <div className="flex items-center gap-3 mb-8">
+          <UserPlus className="text-purple-600 w-8 h-8" />
+          <h2 className="text-3xl font-bold text-purple-600">Add New Employee</h2>
+        </div>
+        
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="First Name"
+                className={inputClasses}
+                value={formData.firstName}
+                onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+              />
+            </div>
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Last Name"
+                className={inputClasses}
+                value={formData.lastName}
+                onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+              />
+            </div>
+          </div>
+
+          <div className="relative">
+            <Mail className={iconClasses} />
+            <input
+              type="email"
+              placeholder="Email"
+              className={`${inputClasses} pl-12`}
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
+            />
+          </div>
+
+          <div className="relative">
+            <Lock className={iconClasses} />
+            <input
+              type="password"
+              placeholder="Password"
+              className={`${inputClasses} pl-12`}
+              value={formData.password}
+              onChange={(e) => setFormData({...formData, password: e.target.value})}
+            />
+          </div>
+
+          <div className="relative">
+            <Briefcase className={iconClasses} />
+            <input
+              type="text"
+              placeholder="Position"
+              className={`${inputClasses} pl-12`}
+              value={formData.position}
+              onChange={(e) => setFormData({...formData, position: e.target.value})}
+            />
+          </div>
+
+          <div className="relative">
+            <Users className={iconClasses} />
+            <input
+              type="text"
+              placeholder="Department"
+              className={`${inputClasses} pl-12`}
+              value={formData.department}
+              onChange={(e) => setFormData({...formData, department: e.target.value})}
+            />
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+            className="w-full bg-purple-600 text-white py-3 rounded-lg font-medium hover:bg-purple-700 transform hover:scale-[1.02] transition-all duration-200"
           >
             Add Employee
           </button>

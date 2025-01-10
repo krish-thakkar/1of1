@@ -9,6 +9,8 @@ import AddEmployee from './pages/company/AddEmployee';
 import AssignTask from './pages/company/AssignTask';
 import EmployeeLogin from './pages/employee/EmployeeLogin';
 import EmployeeDashboard from './pages/employee/EmployeeDashboard';
+import Roadmap from './pages/employee/Roadmap';
+import PicPrompt from './pages/employee/PicPrompt';
 
 function App() {
   return (
@@ -39,6 +41,16 @@ function App() {
           <Route path="/employee" element={
             <PrivateRoute userType="employee">
               <EmployeeDashboard />
+            </PrivateRoute>
+          } />
+          <Route path="/employee/roadmap" element={
+            <PrivateRoute userType="employee">
+              <Roadmap/>
+            </PrivateRoute>
+          } />
+          <Route path="/employee/picprompt" element={
+            <PrivateRoute userType="employee">
+              <PicPrompt/>
             </PrivateRoute>
           } />
         </Routes>

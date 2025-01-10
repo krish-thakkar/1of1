@@ -57,10 +57,10 @@ const CompanyRegister = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-purple-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-purple-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-purple-500/20">
         <div>
-          <h2 className="text-center text-4xl font-bold text-white">
+          <h2 className="text-center text-4xl font-bold text-purple-700">
             Register Your Company
           </h2>
           <p className="mt-2 text-center text-sm text-purple-200">

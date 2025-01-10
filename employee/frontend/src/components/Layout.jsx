@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { User, Menu, LogOut, Building2, ChevronDown } from 'lucide-react';
+import Roadmap from '../pages/employee/Roadmap';
 
 const Layout = ({ children }) => {
   const { user, logout } = useAuth();
@@ -53,6 +54,18 @@ const Layout = ({ children }) => {
                   <Link to="/employee"
                     className="text-gray-600 hover:text-purple-600 transition-colors">
                     My Tasks
+                  </Link>
+                )}
+                {user?.type === 'employee' && (
+                  <Link to="/employee/roadmap"
+                    className="text-gray-600 hover:text-purple-600 transition-colors">
+                    Roadmap
+                  </Link>
+                )}
+                {user?.type === 'employee' && (
+                  <Link to="/employee/picprompt"
+                    className="text-gray-600 hover:text-purple-600 transition-colors">
+                    PicPrompt
                   </Link>
                 )}
               </div>

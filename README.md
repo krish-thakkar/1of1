@@ -15,7 +15,7 @@ For an in-depth look at **1of1** and how it transforms learning into a gamified 
 
 Here’s a visual representation of the **1of1** system architecture, showcasing how **Company** and **Employee** users interact with the platform, as well as the core processes involved.
 
-![Data Flow Diagram](images/Data Flow Diagram.jpg)  
+![Data Flow Diagram](images/usage.jpg)  
 *The system's data flow and user interactions with key functionalities.*
 
 ---

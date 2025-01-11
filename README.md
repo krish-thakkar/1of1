@@ -53,10 +53,10 @@ Here’s a visual representation of the **1of1** system architecture, showcasing
 
 Here are some visuals that highlight key components of the platform:
 
-![Company Dashboard](images/company_dashboard.png)  
+![Company Dashboard](images/company_dashboard.jpg)  
 *The **Company Dashboard** for managing tasks and tracking employee progress.*
 
-![Home Page](images/home_page_krish.png)  
+![Home Page](images/home_page_krish.jpg)  
 *The **Home Page** where employees can access their personalized learning content.*
 
 ![Roadmap](images/roadmap.png)  

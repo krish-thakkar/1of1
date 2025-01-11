@@ -6,7 +6,7 @@
 
 Here’s a visual representation of the **1of1** system architecture, showcasing how **Company** and **Employee** users interact with the platform, as well as the core processes involved.
 
-![Data Flow Diagram](images/data_flow_diagram.png)  
+![Data Flow Diagram](images/Data Flow Diagram.jpg)  
 *The system's data flow and user interactions with key functionalities.*
 
 ---
@@ -62,7 +62,7 @@ Here are some visuals that highlight key components of the platform:
 ![Roadmap](images/roadmap.png)  
 *The **Personalized Roadmap**, showing the progression and learning path of an employee.*
 
-![SWOT Analysis](images/swot_analysis.png)  
+![SWOT Analysis](images/SWOT_analysis.png)  
 *The **SWOT Analysis** tool helps employees track their strengths and areas for improvement.*
 
 ![Blueprint Reader](images/blueprint_reader.png)  

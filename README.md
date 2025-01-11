@@ -2,6 +2,15 @@
 
 **Welcome to 1of1** — a revolutionary platform that blends **gamification** with **AI-powered learning** to create a highly interactive, personalized, and engaging learning experience for employees. Gone are the days of monotonous training sessions! With **1of1**, learning becomes a game—rewarding, motivating, and fun.
 
+## 📅 **Presentation**
+
+For an in-depth look at **1of1** and how it transforms learning into a gamified experience, check out our presentation here:
+
+[View the Presentation on Canva](https://www.canva.com/design/DAGb0YrZUB4/9_zj1-KihmmIDvxuGf2MCA/view?utm_content=DAGb0YrZUB4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h824f204a54)
+
+---
+
+
 ## 🚀 **Use Case Diagram**
 
 Here’s a visual representation of the **1of1** system architecture, showcasing how **Company** and **Employee** users interact with the platform, as well as the core processes involved.
